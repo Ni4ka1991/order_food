@@ -29,13 +29,13 @@ if (food_1_quantity <= food_1_aviable):
 else:
   print("Sorry. We haven't enougt piece of " + food_1_name + ".")
   print("The maximal quantity of " + food_1_name + " you can order is " + str(food_1_aviable) + ".")
-  print("Do you whant to change your order$.")
+  print("Do you whant to change your order?.")
   
-  response = input("Type Y or N")
-  if (response == "Y"):
-    food_1_quantity = int(input("Change your order. Put here maximal quantity of " + food_1_name)
-  else:
-   print("You can order another dish. We have a lot of different dishes.")
+  #response = input("Type Y or N")
+  #if (response == "Y"):
+    #food_1_quantity = int(input("Change your order. Put here maximal quantity of " + food_1_name)
+  #else:
+   #print("You can order another dish. We have a lot of different dishes.")
 	
 
 
