@@ -19,21 +19,16 @@ drink_1_aviable = 1           #drink
 
 #logic
 
-food_1_quantity = int(input("How many " + food_1_name + "do you want"))
-food_1_cost = food_1_quantity * food_1_price
+food_1_quantity = int(input("How many " + food_1_name + " do you want?"))
+
 
 if (food_1_quantity <= food_1_aviable):
-	
- 
-
-
-
-food_2_quantity = int(input("How many " + food_2_name + "do you want"))
-drink_1_quantity = int(input("How many " + drink_1_name + "do you want"))
-
-
-
-
+  food_1_cost = food_1_quantity * food_1_price
+  print("We have enough " + food_1_name + ".")
+  print("The price of " + food_1_quantity + " will be " + food_1_cost + " MDL")
+else:
+  print("Sorry. We haven't enougt piece of " + food_1_name + ".")
+  print("The maximal quantity of " + food_1_name + " you can order is " + food_1_aviable + ".")
 
 
 #view
