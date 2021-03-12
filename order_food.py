@@ -1,5 +1,6 @@
 #!/usr/bin/env Python3
 
+
 #data
 
 food_1_name     = "Pizza"
@@ -31,12 +32,14 @@ else:
   print("The maximal quantity of " + food_1_name + " you can order is " + str(food_1_aviable) + ".")
   print("Do you whant to change your order?.")
   
-  response = input("Type Y or N\n")
-  if (response == "Y" or "y"):
+  response = input("Type 1 or 2\n")
+  print(response)
+  response = int(response)
+  if (response == 1):
    food_1_quantity = int(input("Change your order. Put here maximal quantity of " + food_1_name + "\n"))
    food_1_cost = food_1_quantity * food_1_price
    print("The price of " + str(food_1_quantity) + " pieces  will be " + str(food_1_cost) + " MDL")
-  elif(response == "N" or "n"):
+  elif (response == 2):
     print("You can order another dish. We have a lot of different dishes.")
   else:
    print("Wow. Its work!")
