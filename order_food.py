@@ -19,7 +19,7 @@ drink_1_aviable = 1           #drink
 
 #logic
 
-food_1_quantity = int(input("How many " + food_1_name + " do you want?"))
+food_1_quantity = int(input("How many " + food_1_name + " do you want?\n"))
 
 
 if (food_1_quantity <= food_1_aviable):
@@ -27,15 +27,19 @@ if (food_1_quantity <= food_1_aviable):
   print("We have enough " + food_1_name + ".")
   print("The price of " + str(food_1_quantity) + " pieces  will be " + str(food_1_cost) + " MDL")
 else:
-  print("Sorry. We haven't enougt piece of " + food_1_name + ".")
+  print("Sorry. We haven't enougt pieces of " + food_1_name + ".")
   print("The maximal quantity of " + food_1_name + " you can order is " + str(food_1_aviable) + ".")
   print("Do you whant to change your order?.")
   
-  #response = input("Type Y or N")
-  #if (response == "Y"):
-    #food_1_quantity = int(input("Change your order. Put here maximal quantity of " + food_1_name)
-  #else:
-   #print("You can order another dish. We have a lot of different dishes.")
+  response = input("Type Y or N\n")
+  if (response == "Y" or "y"):
+   food_1_quantity = int(input("Change your order. Put here maximal quantity of " + food_1_name + "\n"))
+   food_1_cost = food_1_quantity * food_1_price
+   print("The price of " + str(food_1_quantity) + " pieces  will be " + str(food_1_cost) + " MDL")
+  elif(response == "N" or "n"):
+    print("You can order another dish. We have a lot of different dishes.")
+  else:
+   print("Wow. Its work!")
 	
 
 
